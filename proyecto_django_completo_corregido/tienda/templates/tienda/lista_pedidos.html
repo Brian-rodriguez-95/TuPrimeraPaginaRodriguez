@@ -1,0 +1,12 @@
+
+{% extends "tienda/base.html" %}
+
+{% block title %}Pedidos{% endblock %}
+{% block content %}
+<h2>Lista de Pedidos</h2>
+<ul>
+    {% for pedido in pedidos %}
+        <li>{{ pedido.cliente.nombre }} pidió {{ pedido.producto.nombre }} el {{ pedido.fecha }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
